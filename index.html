@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Board de tarefas</title>
+</head>
+
+<body>
+    <main>
+
+        <h1>Board de tarefas</h1>
+        <form>
+            <input type="text" placeholder="Nome da tarefa" class="input-tarefas" id="nome-tarefa">
+            <input type="text" placeholder="Etiqueta" class="input-tarefas" id="tipo-tarefa">
+            <button class="botao-acao" id="botao-tarefa">+</button>
+        </form>
+        <div class="cards">
+            <div class="card-tarefa">
+                <div class="info-task">
+                    <h2>Implementar tela de listagem de tarefas</h2>
+                    <div class="task-label">
+                        <label>frontend</label>
+                        <p>Criado em: 21/08/2024</p>
+                    </div>
+                </div>    
+                <div>
+                    <button class="botao-acao" id="concluir-tarefa">concluir</button>
+                </div>
+              
+                
+            </div>
+            <div class="card-tarefa">
+                <div class="info-task">
+                    <h2>Criar endpoint para cadastro de tarefas</h2>
+                    <div class="task-label">
+                        <label>backend</label>
+                        <p>Criado em: 21/08/2024</p>
+                    </div>
+                </div>    
+                <div>
+                    <button class="botao-acao" id="concluir-tarefa">concluir</button>
+                </div>
+              
+                
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <p id="tarefa-concluida"> 1 tarefa concluida</p>
+        </footer>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
