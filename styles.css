@@ -1,145 +1,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-:root{
-    --cor-titulo:#11175E;
-    --cor-tarefa:#001747;
-    --cor-concluir:#2D70FD;
-    --cor-bordas:#EEEEEE;
-    --cor-label:#B1BACB;
-    --fonte-primaria:"Rubik", sans-serif;
-    --fonte-secundaria: "inter", sans-serif;
+/* === Variáveis === */
+:root {
+  --cor-titulo: #11175E;
+  --cor-tarefa: #001747;
+  --cor-concluir: #2D70FD;
+  --cor-bordas: #EEEEEE;
+  --cor-label: #B1BACB;
+  --cor-concluida:#8F98A8;
+
+
+  --fonte-primaria: "Rubik", sans-serif;
+  --fonte-secundaria: "Inter", sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* === Corpo da Página === */
+body {
+  background: #F5F9FF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonte-secundaria);
+}
+
+/* === Container Principal === */
+main {
+  background: #FFFFFF;
+  border: 1px solid var(--cor-bordas);
+  border-radius: 1rem;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* === Cabeçalho === */
+h1 {
+  font-family: var(--fonte-primaria);
+  color: var(--cor-titulo);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+/* === Formulário === */
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-tarefa {
+  width: 15.8rem;
+  height: 3rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--cor-bordas);
+  border-radius: 8px;
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+}
+
+.input-tarefa::placeholder {
+  color: var(--cor-label);
+  font-weight: 400;
+}
+
+/* === Botões === */
+.botao-acao {
+  background-color: var(--cor-concluir);
+  color: #FFFFFF;
+  border: 1px solid var(--cor-concluir);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--fonte-secundaria);
+  width: 7.5rem;
+  height: 2.7rem;
+}
+
+#botao-tarefa {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+
+
+/* === Lista de Tarefas === */
+.tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--cor-bordas);
+  border-radius: 1rem;
+  background-color: #fff;
+  
+}
+
+/* === Informações da Tarefa === */
+.info-tarefa {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.titulo-tarefa {
+  font-size: 1rem;
+  font-weight: 500;
+ 
+  
+}
+.tarefa-incompleta {
+ color: var(--cor-tarefa);
+}
+
+/* === Detalhes === */
+.detalhes-tarefa {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--cor-label);
+  font-size: 0.85rem;
+}
+
+.etiqueta {
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid var(--cor-label);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+}
+
+/* === Rodapé === */
+footer {
+  margin-top: 1rem;
+}
+
+hr {
+  border: 1px solid var(--cor-bordas);
+  width: 100%;
+}
+
+
+/*== Tarefas concluídas == */
+#tarefa-concluida {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-label);
+  text-align: end;
+  padding-top: 1.6rem;
+}
+
+.titulo-concluida{
+  text-decoration: line-through;
+  color: var(--cor-concluida);
+}
+
+.icone-check{
+  margin:0 2rem;
+}
+
+
+
+/*== Responsividade == */
+@media (max-width:650px){
 body{
-    background:#F5F9FF ;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  align-items: start;
+ 
 }
-
 main{
-    background: #FFFFFF; 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    /* width: 45rem; */
-    padding: 3.5rem;
-    border-radius: 1rem ;
-    border: solid var(--cor-bordas);
-   
+  margin:0 1rem;
+  padding: 0;
+ 
 }
+ h1{
+  font-size: 2rem;
+  text-align: center;
+  
+}
+#form-tarefa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-h1{
-    color: var(--cor-titulo);
-    font-family: var(--fonte-primaria);
-    font-weight: 600;
-    font-size: 2.5rem;
-    
 }
-
-form{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-.botao-acao{
-    background-color: var(--cor-concluir);
-    color: #FFFFFF;
-    border: 1px solid var(--cor-concluir);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    
+.input-tarefa{
+  width: 90%;
 }
 #botao-tarefa{
-    width: 2.8rem;
-    height: 2.8rem;
+  width: 90%;
+  
 }
-
-.input-tarefas{
-    width: 15.8rem;
-    height: 3rem;
-    border: 1px solid var(--cor-bordas);
-    border-radius: 8px;
-    padding: 1.5rem 2rem;
-}
-.input-tarefas::placeholder{
-    font-family: var(--fonte-primaria);
-    font-weight:400;
-    font-size: 1rem;
-    color: var(--cor-label);
-}
-.cards{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+.tarefas{
+  justify-content: center;
+  align-items: center;
 }
 .card-tarefa{
-    border: 1px solid var(--cor-bordas);
-    border-radius: 1rem;
-    display: flex;
-    gap: 4rem;
-    height: 6.5rem;
-    align-items: center;
-    justify-content: center;
-}
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 
-h2{
-    font-size: 1rem;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    color: var(--cor-tarefa);
-}
-.info-task{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    
-}
-.task-label{
-    display: flex;
-    gap:.5rem;
-    color: var(--cor-label);
-    align-items: center;
-    font-family: var(--fonte-secundaria);
-}
-
-label{
-    font-size: 0.7rem;
-    font-weight: 500;
-    /* font-family: var(--fonte-secundaria); */
-    border: 1px solid var(--cor-label);
-    border-radius: 1rem;
-    padding: 0.25rem 0.5rem;   
-}
-#concluir-tarefa{
-    width: 7.5rem;
-    height: 2.7rem;
-}
-p{
-    font-size: 0.8rem;
-    
-}
-
-hr{
-    border: 1px solid var(--cor-bordas);
-    width: 100%;
 }
 #tarefa-concluida{
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: var(--fonte-secundaria);
-    color: var(--cor-label);
-    text-align: end;
-    padding-top: 1.6rem;
+  margin-right: 1rem;
 }
+}
+
