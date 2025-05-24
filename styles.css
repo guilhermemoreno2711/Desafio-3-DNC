@@ -181,7 +181,51 @@ hr {
 
 
 /*== Responsividade == */
-@media (max-width:650px){
+
+/*== Tablet == */
+@media (max-width:1024px){
+  body{
+  align-items: start;
+  
+}
+main{
+  margin:1rem 1rem;
+  padding: 0;
+ 
+}
+ h1{
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 1rem;
+  
+}
+#form-tarefa{
+ margin-left:1rem;
+}
+.input-tarefa{
+  width: 40%;
+}
+#botao-tarefa{
+  width: 10%;
+  
+}
+.tarefas{
+align-items: center;
+
+ 
+}
+.card-tarefa{
+  width: 90%;
+
+}
+#tarefa-concluida{
+  margin-right: 1rem;
+}
+}
+
+/*== Mobile== */
+
+@media (max-width:480px){
 body{
   align-items: start;
  
